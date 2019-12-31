@@ -11,6 +11,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.Map;
+
 public class LoginStepDefs {
     @Given("the user is on login page")
     public void the_user_is_on_login_page() {
@@ -52,5 +54,16 @@ public class LoginStepDefs {
         System.out.println(actual);
        Assert.assertEquals("Inventory - Odoo", actual);
     }
+    @When("the user logs in using following credentials")
+    public void the_user_logs_in_using_following_credentials (Map<String, String> userData) {
+            System.out.println(userData);
+//            System.out.println("Username: "+ userData.get("Username"));
+//            System.out.println("Password: "+ userData.get("Password"));
+            LoginPage loginPage = new LoginPage();
+            loginPage.login(userData.get("Username"), userData.get("Password"));
+    }
+
+
+
 
 }
