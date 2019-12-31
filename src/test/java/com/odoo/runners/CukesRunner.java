@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/",
         glue = "com/odoo/step_defs",
         dryRun = false,
-        tags = "@store_manager"
+        tags = "@wip"
+
 )
 public class CukesRunner {
 }
