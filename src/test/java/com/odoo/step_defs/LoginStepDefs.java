@@ -14,6 +14,8 @@ import org.junit.Assert;
 import java.util.Map;
 
 public class LoginStepDefs {
+
+
     @Given("the user is on login page")
     public void the_user_is_on_login_page() {
         System.out.println("Opening the login page");
@@ -27,6 +29,7 @@ public class LoginStepDefs {
     contactUN = ConfigurationReader.get("contactUsername");
     contactPW = ConfigurationReader.get("contactPassword");
       new LoginPage().login(contactUN, contactPW);
+      new LoginPage().loginButton.click();
       BrowserUtils.waitFor(2);
 
     }

@@ -1,8 +1,8 @@
-Feature: log in as different user types
+Feature: log in as different users
 
   Background:
     Given the user is on login page
-
+@inventoryManager
   Scenario: login as costumer
 
     When the user logs in with "imm10@info.com" and "inventorymanager"
@@ -10,11 +10,8 @@ Feature: log in as different user types
     Then user should be able to click on Inventory module
     Then user should be able to click Reordering Rules
 
-  Scenario: login as a crm manager
-    When the user logs in with "eventscrmmanager12@info.com" and "eventscrmmanager"
-    Then user should be able to log in
 
-  @wip
+  @login
   Scenario Outline: Login as many given users
     When the user logs in using following credentials
       | Username | <username> |
@@ -25,5 +22,8 @@ Feature: log in as different user types
       | username                    | password         |
       | eventscrmmanager12@info.com | eventscrmmanager |
       | posmanager65@info.com       | posmanager       |
+      | imm10@info.com              | inventorymanager |
+
+
 
 

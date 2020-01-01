@@ -11,6 +11,9 @@ public class Hooks {
     @Before
     public void setUp() {
         System.out.println("\nThis is coming from before scenario");
+
+
+
     }
 
     @After
