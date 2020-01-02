@@ -7,15 +7,4 @@ import org.openqa.selenium.support.PageFactory;
 
 public abstract class BasePage {
 
-@FindBy(linkText = "Inventory")
-public WebElement inventory;
-
-@FindBy(linkText = "CRM")
-public WebElement CRM;
-
-
-
-    public BasePage() {
-        PageFactory.initElements(Driver.get(), this);
-    }
 }
