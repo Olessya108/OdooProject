@@ -4,7 +4,7 @@ import com.odoo.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+//something
 public abstract class BasePage {
 
 @FindBy(linkText = "Inventory")
